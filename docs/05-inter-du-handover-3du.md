@@ -16,7 +16,7 @@ Handover relies on the CU knowing which cells are neighbours of the serving cell
 
 ## Config changes
 
-All the config files ( CU, DU's (3 or 4) and neighbor config file are in the same folder path: `develop/targets/PROJECTS/GENERIC-NR-5GC/CONF/`                                                                                                                                The modified files are in the path: ` configs/Inter-DU handover`
+All the config files ( CU, DU's (3 or 4) and neighbor config file are in the same folder path: `develop/targets/PROJECTS/GENERIC-NR-5GC/CONF/`                                                                                                                                   The modified files are in the path: https://github.com/JEEVA-25KS/oai-5g-sa-multi-gnb-ue-testbed/tree/1a53e2bc68db16e13910702876ef268e2c81072b/configs/Inter-DU%20handover
 
 
 **Neighbour configurations** 
