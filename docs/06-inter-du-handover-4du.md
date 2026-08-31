@@ -22,19 +22,31 @@ Same CU/DU `local_s_address`/`remote_s_address` and `local_n_address`/`remote_n_
 
 ```bash
 # All machines — build with telnet
+cd ~/openairinterface5g/cmake_targets
 ./build_oai -w USRP --ninja --gNB -C --build-lib telnetsrv
 
 # Machine 1 — core, CU, DU1-DU3 (logged with tee for post-hoc analysis)
+# Terminal 1
 cd ~/oai-cn5g && docker compose up -d
+
+# Terminal 2
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-cu.sa.f1.conf --telnetsrv --telnetsrv.shrmod ci \
   --log_config.global_log_options level,nocolor 2>&1 | tee $HOME/cu.log
 
+
+
+# Terminal 3
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-1.conf \
   --gNBs.[0].min_rxtxtime 6 -E --continuous-tx \
   --log_config.global_log_options level,nocolor 2>&1 | tee $HOME/du1.log
+
+
 # ...same pattern for du-2.conf, du-3.conf
 
 # Machine 2 — DU4
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-4.conf \
   --gNBs.[0].min_rxtxtime 6 -E --continuous-tx \
   --log_config.global_log_options level,nocolor 2>&1 | tee $HOME/du4.log
