@@ -87,14 +87,23 @@ sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-3.conf \
 
 To populate the neighbour config accurately, use the CU's own RRC log after all DUs are up:
 ```bash
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 cat nrRRC_stats.log
 ```
+<img width="1091" height="303" alt="image" src="https://github.com/user-attachments/assets/c843de4a-118f-4f4f-b7c3-e5776e8df877" />
+
 
 ## Triggering handover
 ```bash
 echo ci trigger_f1_ho | nc 192.168.230.94 9090 && echo    # In CU machine
 ```
 Each invocation triggers the next handover in sequence (DU1→DU2, then close and reopen the terminal, repeat for DU2→DU3).
+
+### DU 1 ----> DU 2
+<img width="1157" height="195" alt="image" src="https://github.com/user-attachments/assets/5cf539c1-3cad-4fbe-880e-c809f6b32f85" />
+### DU 2 ----> DU 3
+<img width="1170" height="170" alt="image" src="https://github.com/user-attachments/assets/d2c62623-a504-4694-b326-f74b3fa15ac2" />
+
 
 ## Results
 - UE attached to DU1 and held a stable connection
