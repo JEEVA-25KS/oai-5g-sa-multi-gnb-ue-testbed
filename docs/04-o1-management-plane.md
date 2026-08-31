@@ -81,6 +81,8 @@ done
 - **Single UE**: cell config, UE count, UE identifier, and real-time DL/UL throughput all correctly reported
 - **Two UEs** (two COTS phones, each with a distinct 5G SIM, core DB updated for two subscribers): both detected simultaneously with accurate per-UE operational stats
 - OAI reports per-UE throughput in **bits/ms** rather than bits/s, since the MAC scheduler operates on a 1 ms cadence — this unit directly reflects PRB allocation and MCS decisions each TTI
+<img width="643" height="665" alt="image" src="https://github.com/user-attachments/assets/bc56f38b-8b00-4070-971d-4934aead860f" />
+
 
 **Conclusion**: basic management-plane-style monitoring is functional for monolithic gNB deployments in both single- and multi-UE scenarios, even without full O-RAN NETCONF/YANG support.
 
