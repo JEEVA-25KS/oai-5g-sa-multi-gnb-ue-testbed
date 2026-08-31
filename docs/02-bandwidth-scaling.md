@@ -4,8 +4,8 @@
 Reduce the bandwidth of a one-gNB/one-UE setup by reducing the number of PRBs, and analyze the resulting network connectivity and data rate.
 
 ## Setup
-Config: `gnb.sa.band78.fr1.24PRB.usrpb210.conf` (24 PRB variant of the base config)
-File path: develop/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.24PRB.usrpb210.conf
+- Config: `gnb.sa.band78.fr1.24PRB.usrpb210.conf` (24 PRB variant of the base config)
+- File path: `develop/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.24PRB.usrpb210.conf`
 
 ```
 plmn_list = ({ mcc = 001; mnc = 01; mnc_length = 2; snssaiList = ({ sst = 1 }) });
