@@ -17,7 +17,7 @@ Handover relies on the CU knowing which cells are neighbours of the serving cell
 ## Config changes
 
 - All the config files ( CU, DU's (3 or 4) and neighbor config file are in the same folder path: `develop/targets/PROJECTS/GENERIC-NR-5GC/CONF/`
-- The modified files are in the path: [Inter-DU handover configs](../configs/Inter-DU-handover/)
+- The modified files are in the path: [Inter-DU handover configs](../configs/Inter-DU%20handover/)
 
 
 **Neighbour configurations** 
