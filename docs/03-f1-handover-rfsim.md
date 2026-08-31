@@ -48,10 +48,10 @@ At DU1,
 
 At UE terminal,
 Before handover,
-<img width="732" height="92" alt="image" src="https://github.com/user-attachments/assets/0ae31ef8-416d-461c-84e0-ee9b957770b4" />
+<img width="1054" height="96" alt="image" src="https://github.com/user-attachments/assets/23fbc782-15dc-4f73-96de-37b86f1e477b" />
 
 After handover, 
-<img width="867" height="71" alt="image" src="https://github.com/user-attachments/assets/dbbc9ac5-4849-47f9-89a3-338800a7e7f2" />
+<img width="1048" height="84" alt="image" src="https://github.com/user-attachments/assets/ed3a0f5a-21dc-4949-81e0-8fbc444aefa0" />
 
 
 ## Remarks / gotchas
