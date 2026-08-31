@@ -84,7 +84,7 @@ sudo iptables -A FORWARD -i oai-cn5g -o eno1 -j ACCEPT
 At each UE:
 ```bash
 sudo ip addr flush dev oaitun_ue1
-sudo ip addr add 10.0.0.X/24 dev oaitun_ue1
+sudo ip addr add 10.0.0.X/24 dev oaitun_ue1    # UE tunnel ip
 sudo ip link set oaitun_ue1 up
 sudo ip route add default via 10.0.0.1 dev oaitun_ue1
 sudo resolvectl dns oaitun_ue1 8.8.8.8
