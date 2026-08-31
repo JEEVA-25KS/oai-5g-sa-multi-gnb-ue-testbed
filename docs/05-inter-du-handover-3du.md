@@ -101,6 +101,7 @@ Each invocation triggers the next handover in sequence (DU1→DU2, then close an
 
 ### DU 1 ----> DU 2
 <img width="1157" height="195" alt="image" src="https://github.com/user-attachments/assets/5cf539c1-3cad-4fbe-880e-c809f6b32f85" />
+
 ### DU 2 ----> DU 3
 <img width="1170" height="170" alt="image" src="https://github.com/user-attachments/assets/d2c62623-a504-4694-b326-f74b3fa15ac2" />
 
