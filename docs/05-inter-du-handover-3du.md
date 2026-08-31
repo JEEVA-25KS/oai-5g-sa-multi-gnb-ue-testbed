@@ -50,21 +50,37 @@ MACRLCs = ({
 
 ```bash
 # All machines — build with telnet
+cd ~/openairinterface5g/cmake_targets
 ./build_oai -w USRP --ninja --gNB -C --build-lib telnetsrv
 
 # Machine 1 — core + CU
+
+# Terminal 1
 cd ~/oai-cn5g && docker compose up -d
+
+# Terminal 2
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-cu.sa.f1.conf --telnetsrv --telnetsrv.shrmod ci
 
-# Machine 2 — DU1, then power on UE and let it connect
+# Machine 2 — DU1
+
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-1.conf \
   --gNBs.[0].min_rxtxtime 6 -E --continuous-tx
 
+ # then power on UE and let it connect
+
+# UE
+cd ~/openairinterface5g/cmake_targets/ran_build/build
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ue-fo-compensation -E --uicc0.imsi 001010000000001
+
 # Machine 3 — DU2
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-2.conf \
   --gNBs.[0].min_rxtxtime 6 -E --continuous-tx
 
 # Machine 4 — DU3
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-3.conf \
   --gNBs.[0].min_rxtxtime 6 -E --continuous-tx
 ```
@@ -76,7 +92,7 @@ cat nrRRC_stats.log
 
 ## Triggering handover
 ```bash
-echo ci trigger_f1_ho | nc 192.168.230.94 9090 && echo
+echo ci trigger_f1_ho | nc 192.168.230.94 9090 && echo    # In CU machine
 ```
 Each invocation triggers the next handover in sequence (DU1→DU2, then close and reopen the terminal, repeat for DU2→DU3).
 
