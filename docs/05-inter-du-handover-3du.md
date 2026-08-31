@@ -8,6 +8,9 @@ Implement and validate F1-based inter-DU handover with a real over-the-air 5G SA
 - CU–DU split over F1: DU handles PHY/MAC, CU handles RRC + mobility control
 - 4 machines: core+CU (192.168.230.94), DU1 (192.168.230.72), DU2 (192.168.230.75), DU3 (192.168.230.85)
 
+<img width="1223" height="719" alt="image" src="https://github.com/user-attachments/assets/86656ce9-2abe-4174-8ba7-c63ff49615f0" />
+
+
 ## gNB neighbour configuration
 Handover relies on the CU knowing which cells are neighbours of the serving cell. A `neighbor-config.conf` defines adjacency between DUs (intra-gNB, inter-gNB, and inter-RAT neighbour types are all supported by OAI's model, though this setup only needed inter-DU/intra-gNB).
 
