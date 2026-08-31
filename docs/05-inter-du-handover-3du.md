@@ -13,6 +13,13 @@ Handover relies on the CU knowing which cells are neighbours of the serving cell
 
 ## Config changes
 
+All the config files ( CU, DU's (3 or 4) and neighbor config file are in the same folder path: 
+
+**Neighbour configurations** 
+
+<img width="556" height="180" alt="image" src="https://github.com/user-attachments/assets/9050adce-c708-400f-9db4-b2bc6cbd4c9e" />
+
+
 **CU** — `local_s_address`/`remote_s_address` point at the CU's own IP and a wildcard (since multiple DUs connect in):
 ```
 gNB = ({
