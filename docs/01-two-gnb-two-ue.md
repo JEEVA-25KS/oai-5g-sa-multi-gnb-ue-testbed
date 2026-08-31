@@ -95,6 +95,9 @@ sudo ip link set dev oaitun_ue1 mtu 1400   # account for GTP overhead
 ## Result
 Speedtest confirmed simultaneous, independent internet connectivity on both UEs through their respective gNBs.
 
+<img width="622" height="344" alt="image" src="https://github.com/user-attachments/assets/b443121e-aeaf-4ad7-b803-73095152a900" />
+
+
 ## Limitations observed
 - Limited SDR range occasionally causes both UEs to associate with the same gNB
 - PDU session sometimes fails to establish on initial UE registration
