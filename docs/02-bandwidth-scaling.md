@@ -5,6 +5,7 @@ Reduce the bandwidth of a one-gNB/one-UE setup by reducing the number of PRBs, a
 
 ## Setup
 Config: `gnb.sa.band78.fr1.24PRB.usrpb210.conf` (24 PRB variant of the base config)
+File path: develop/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.24PRB.usrpb210.conf
 
 ```
 plmn_list = ({ mcc = 001; mnc = 01; mnc_length = 2; snssaiList = ({ sst = 1 }) });
@@ -35,6 +36,8 @@ With PRBs reduced from 106 → 24, measured throughput dropped to **~5 Mbit/s** 
 
 ## Result summary
 Reducing PRBs significantly reduced UE data rate, confirming that PRB allocation directly bounds available bandwidth in the SA setup.
+<img width="759" height="176" alt="image" src="https://github.com/user-attachments/assets/32d269e6-0551-4839-aa11-e8c2cd1d6f12" />
+
 
 ## References
 - OpenAirInterface5G GitLab, `doc/NR_SA_Tutorial_OAI_CN5G.md`, `doc/NR_SA_Tutorial_OAI_nrUE.md`
