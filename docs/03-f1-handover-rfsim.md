@@ -34,6 +34,25 @@ echo ci trigger_f1_ho | nc 127.0.0.1 9090 && echo
 
 ## Result
 F1 handover executed successfully: UE context transferred from DU0 to DU1 under CU control, verified via RRC and F1AP signaling (RNTI change observed at handover). **User-plane/PDU-session continuity was not established** — the current implementation validates control-plane handover only.
+At CU after triggering handover:
+<img width="978" height="181" alt="image" src="https://github.com/user-attachments/assets/2ed5a8d2-baa7-48d8-b893-341262363720" />
+
+The handover command makes the UE to be transferred from DU 0 to DU1, where the UE’s RNTI gets changed.
+
+After handover,
+At DU0,
+<img width="1089" height="206" alt="image" src="https://github.com/user-attachments/assets/6446dacf-e2d1-4b7f-9843-b956c509af2e" />
+
+At DU1,
+<img width="1068" height="119" alt="image" src="https://github.com/user-attachments/assets/c1ca9fda-76e7-472e-a7fd-9d1958131b62" />
+
+At UE terminal,
+Before handover,
+<img width="732" height="92" alt="image" src="https://github.com/user-attachments/assets/0ae31ef8-416d-461c-84e0-ee9b957770b4" />
+
+After handover, 
+<img width="867" height="71" alt="image" src="https://github.com/user-attachments/assets/dbbc9ac5-4849-47f9-89a3-338800a7e7f2" />
+
 
 ## Remarks / gotchas
 - Start order matters: DU0 → UE → DU1 (UE must sync to DU0's SIB1 before DU1 comes online)
