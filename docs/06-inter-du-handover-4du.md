@@ -15,6 +15,9 @@ Extend the [3-DU inter-DU handover](05-inter-du-handover-3du.md) work to 4 DUs, 
 | DU3 | 2 | 3 | 12345680L |
 | DU4 | 3 | 4 | 12345689L |
 
+<img width="1351" height="555" alt="image" src="https://github.com/user-attachments/assets/3489ce6c-c780-4720-b960-d87a9edc6e2e" />
+
+
 ## Config pattern
 Same CU/DU `local_s_address`/`remote_s_address` and `local_n_address`/`remote_n_address` pattern as the [3-DU setup](05-inter-du-handover-3du.md#config-changes), applied across 4 DU config files, each with a unique PCI/TAC/cell ID from the table above.
 
@@ -53,6 +56,13 @@ sudo ./nr-softmodem -O .../gnb-du.sa.band78.106PRB.usrpb210.du-4.conf \
 ```
 
 Neighbour config populated the same way — from the CU's `nrRRC_stats.log` once all DUs are up.
+
+```bash
+cd ~/openairinterface5g/cmake_targets/ran_build/build
+cat nrRRC_stats.log
+```
+<img width="780" height="404" alt="image" src="https://github.com/user-attachments/assets/4e76ba07-9a1c-45fe-b39f-33592e5873e3" />
+
 
 ## Triggering handover
 ```bash
