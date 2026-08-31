@@ -15,6 +15,7 @@ cd ~/openairinterface5g/cmake_targets
 ```
 
 **gNB config changes** (`gnb.sa.band78.fr1.106PRB.usrpb210.conf`):
+**File path** - `targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf`
 ```
 NETWORK_INTERFACES:
 {
