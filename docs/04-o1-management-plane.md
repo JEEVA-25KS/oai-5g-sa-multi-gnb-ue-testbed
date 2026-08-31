@@ -14,7 +14,7 @@ cd ~/openairinterface5g/cmake_targets
 ./build_oai -w USRP --ninja --gNB -C --build-lib telnetsrv
 ```
 
-**gNB config changes** (`gnb.sa.band78.fr1.106PRB.usrpb210.conf`):
+**gNB config changes** (`gnb.sa.band78.fr1.106PRB.usrpb210.conf`):                                                                  
 **File path** - `targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf`
 ```
 NETWORK_INTERFACES:
